@@ -1,0 +1,97 @@
+.footer
+    background: #0070af
+    max-width: 95%
+    min-height: 175px
+    margin: auto
+    margin-top: 45px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media screen and (max-width: 696px)
+        max-width: 100%
+    @media screen and (max-width: 602px)
+        flex-direction: column
+    @media screen and (max-width: 376px)
+        margin-top: 30px
+        padding-bottom: 15px
+    & h2
+        color: #fff
+        font-size: 30px
+        margin-left: 70px
+        font-weight: 500
+        transition: .3s ease-out
+        cursor: pointer
+        @media screen and (max-width: 696px)
+            font-size: 23px
+            margin-left: 30px
+        @media screen and (max-width: 602px)
+            margin-top: 10px
+        @media screen and (max-width: 376px)
+            font-size: 20px
+        @media screen and (min-width: 1920px)
+            font-size: 40px
+    & h2:hover
+        transform: scale(0.95)
+    & h2:active
+        transform: scale(0.98)
+    &__social img
+        width: 30px
+        height: 30px
+        margin-right: 10px
+        transition: .3s ease-out
+        cursor: pointer
+        @media screen and (max-width: 602px)
+            width: 24px
+            height: 24px
+        @media screen and (max-width: 376px)
+            width: 20px
+            height: 20px
+    &__social img:hover
+        transform: scale(.91)
+    &__social img:active
+        transform: scale(0.98)
+    &__social a
+        color: #fff
+        font-size: 15px
+        text-decoration: none
+        @media screen and (max-width: 376px)
+            font-size: 13px
+        @media screen and (min-width: 1920px)
+            font-size: 25px
+    &__social a:after
+        background-color: #cce2ef
+        display: block
+        content: ""
+        height: 2px
+        width: 0%
+        left: 50%
+        position: relative
+        transition: width .3s ease-in-out
+        transform: translateX(-50%)
+        margin-top: 1px
+    &__social a:hover:after,
+    &__social a:focus:after 
+        width: 100%
+    &__social
+        margin-right: 70px
+        display: flex
+        flex-direction: column
+        @media screen and (max-width: 602px)
+            margin: 0
+            justify-content: center
+            align-items: center
+    &__social-flex
+        display: flex
+        align-items: center
+        margin-top: 15px
+        
+
+@keyframes smudge 
+	0% 
+		transform: rotate(0deg) translateY(0px)
+		opacity 1
+		filter: blur(1px)
+	100% 
+		transform: rotate(1deg) translateY(-110px)
+		opacity: 0
+		filter: blur(20px)

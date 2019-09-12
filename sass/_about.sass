@@ -1,0 +1,38 @@
+.about
+    max-width: 95%
+    margin: auto
+    margin-top: 45px
+    &__fill img
+        float: right
+        margin: 4px 0px 2px 30px
+        cursor: pointer
+        transition: .3s ease-out
+        @media screen and (max-width: 482px)
+            display: flex
+            justify-content: center
+            width: 100%
+        @media screen and (min-width: 1920px)
+            width: 450px
+            
+    &__fill img:hover
+        box-shadow: 0 0 7px rgba(0,0,0,0.5)
+        transform: scale(1.01)
+    &__fill img:active
+        transform: scale(0.98)
+    &__text
+        text-align: left
+        @media screen and (max-width: 482px)
+            text-align: center
+    &__text p
+        margin-top: 50px
+        color: #585656
+        line-height: 1.9em
+        @media screen and (min-width: 1920px)
+            font-size: 24px
+    &__text h2
+        font-size: 30px
+        @media screen and (max-width: 482px)
+            display: inline-block
+            margin-top: 20px
+        @media screen and (min-width: 1920px)
+            font-size: 35px

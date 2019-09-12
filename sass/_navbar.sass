@@ -1,0 +1,126 @@
+.header
+    background: #0070af
+    max-width: 95%
+    min-height: 175px
+    margin: auto
+    @media screen and (max-width: 684px)
+        max-width: 100%
+    &__navbar
+        display: flex
+        @media screen and (max-width: 684px)
+            position: absolute
+            width: 50%
+            left: 0px
+            top: 23vh
+            background-color: #0070af
+            display: flex
+            flex-direction: column
+            transform: translateX(-100%)
+            border-bottom-right-radius: 20px
+            // border: 2px solid red
+            transition: transform 0.3s ease-out
+    &__header-name h1
+        color: #fff
+        font-weight: 400
+        font-size: 40px
+        display: flex
+        margin: 0
+        padding-top: 40px
+        transition: .3s ease-out
+        cursor: pointer
+        @media screen and (max-width: 540px)
+            font-size: 30px
+            justify-content: center
+        @media screen and (max-width: 410px)
+            font-size: 24px
+        @media screen and (max-width: 330px)
+            font-size: 20px
+        @media screen and (mix-width: 1920px)
+            font-size: 45px
+    &__header-name h1:hover
+        animation: smudge 10s 
+    &__navbar-links
+        display: flex
+        justify-content: space-between
+        width: 100%
+        flex-wrap: wrap 
+        @media screen and (max-width: 684px)
+            flex-wrap: nowrap
+            flex-direction: column
+            // align-items: center
+    &__navbar-links
+        padding: 0
+        margin-top: 40px
+    &__navbar-links a:after
+        background-color: #cce2ef
+        display: block
+        content: ""
+        height: 2px
+        width: 0%
+        left: 50%
+        position: relative
+        transition: width .3s ease-in-out
+        transform: translateX(-50%)
+        @media screen and (max-width: 684px)
+            transform: translate(0)
+            left: 0
+            background: linear-gradient(to right, rgb(204,226,239) 0%, transparent 100%)
+    &__navbar-links a:hover:after,
+    &__navbar-links a:focus:after 
+        width: 100%
+    &__navbar-links li 
+        list-style: none
+        @media screen and (max-width: 684px)
+            opacity: 0
+    &__navbar-links a 
+        text-decoration: none
+        color: #fff
+        font-size: 18px
+        line-height: 30px
+        transition: 0.3s ease-out
+        @media screen and (max-width: 684px)
+            line-height: 40px
+            margin-left: 10px
+        @media screen and (max-width: 374px)
+            font-size: 15px
+        @media screen and (min-width: 1920px)
+            font-size: 25px
+    &__burger
+        display: none
+        cursor: pointer
+        @media screen and (max-width: 684px)
+            display: block
+            margin-top: 40px
+        @media screen and (max-width: 410px)
+            margin-top: 50px
+    &__burger div
+        width: 25px
+        height: 4px
+        border-radius: 20px
+        background-color: #fff
+        margin: 5px
+        transition: all 0.3s ease-out
+        position: relative
+
+.toggle .line1
+        transform: rotate(-45deg) 
+        top: 9px
+.toggle .line2
+        opacity: 0
+.toggle .line3
+        transform: rotate(45deg) 
+        bottom: 9px
+
+.navbar_active
+    transform: translateX(0%)
+
+@keyframes navLinkFade 
+    from 
+        opacity: 0
+        transform: translateX(50px)
+    to 
+        opacity: 1
+        transform: translateX(0px)
+    
+
+        
